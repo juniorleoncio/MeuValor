@@ -8,6 +8,21 @@
 import Foundation
 
 struct User: Identifiable, Codable {
-    let id: String
+    var id: String
+    var fullname: String
+    var email: String
 
+    var initials: String {
+        let formatter = PersonNameComponentsFormatter()
+        if let components = formatter.personNameComponents(from: fullname) {
+            formatter.style = .abbreviated
+            return formatter.string(from: components)
+        }
+        
+        return ""
+    }
+    
+}
+extension User {
+    static var MOCK_UP = User(id: UUID().uuidString, fullname: "", email: "")
 }
