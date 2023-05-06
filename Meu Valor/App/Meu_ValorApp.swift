@@ -14,11 +14,11 @@ struct Meu_ValorApp: App {
     init() {
         FirebaseApp.configure()
     }
-    @StateObject var viewModel = CreateUserViewModel()
+    @StateObject var createViewModel = CreateUserViewModel()
     var body: some Scene {
         WindowGroup {
-            SplashView()
-                .environmentObject(viewModel)
+            ContentView()
+                .environmentObject(createViewModel)
         }
     }
 }

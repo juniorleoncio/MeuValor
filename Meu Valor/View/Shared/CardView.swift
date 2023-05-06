@@ -10,13 +10,13 @@ import SwiftUI
 struct CardView: View {
     var title: String
     var imageSymbol: String
-    var value: String
+    var value: Text
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.headline).bold()
-                Text(value)
+                Text("\(value)")
                     .font(.title).bold()
             }
             .padding()
@@ -39,6 +39,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(title: "Sua hora vale:", imageSymbol: "brazilianrealsign.circle.fill", value: "R$ 60,00")
+        CardView(title: "Sua hora vale:", imageSymbol: "brazilianrealsign.circle.fill", value: Text(""))
     }
 }

@@ -9,7 +9,17 @@ import SwiftUI
 
 struct MoneyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("Meu Valor")
+                .font(.title).fontWeight(.bold).fontDesign(.rounded)
+            
+            Spacer()
+            
+            Image(systemName: "person.circle")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 30, height: 30)
+        }
     }
 }
 

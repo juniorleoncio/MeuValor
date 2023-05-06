@@ -1,5 +1,5 @@
 //
-//  SplashView.swift
+//  ContentView.swift
 //  Meu Valor
 //
 //  Created by junior leoncio on 05/05/23.
@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct SplashView: View {
+struct ContentView: View {
   
-    @EnvironmentObject var viewModel: CreateUserViewModel
+    @EnvironmentObject var createViewModel: CreateUserViewModel
     
     var body: some View {
        
         Group {
-            if viewModel.userSession != nil {
-                HomeBottomView()
+            if createViewModel.userSession != nil {
+                HomeView()
             } else {
                 LoginView()
             }
@@ -26,7 +26,7 @@ struct SplashView: View {
 
 struct SplashView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashView()
+        ContentView()
             .environmentObject(CreateUserViewModel())
         
     }

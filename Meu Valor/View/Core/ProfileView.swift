@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var profileVM: CreateUserViewModel
+    @EnvironmentObject var createViewModel: CreateUserViewModel
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        if let user = profileVM.currentUser {
+        if let user = createViewModel.currentUser {
             List {
+                Section {
+                    HStack {
+                        Button("< Back") {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                        
+                    }
+                }
+                .listRowBackground(Color(.systemGray6))
+                
                 Section {
                     HStack {
                         Text(user.initials)
@@ -46,19 +57,31 @@ struct ProfileView: View {
                             .font(.subheadline)
                             .foregroundColor(Color(.systemGray))
                     }
+                    
+                    HStack {
+                        SettingsRowView(imageName: "gear", title: "Created by", tintColor: Color(.systemGray))
+                        
+                        Spacer()
+                        
+                        Text("Junior Leoncio")
+                            .font(.headline)
+                            .foregroundColor(Color(.systemGray))
+                        
+                    }
                 }
                 
+               
+                
                 Section("Account") {
-                    Button { profileVM.signOut()} label: {
+                    Button { createViewModel.signOut()} label: {
                         SettingsRowView(imageName: "arrow.left.circle.fill", title: "Sign Out", tintColor: Color(.systemRed))
                     }
                     
-                    Button { print("Delete account...")} label: {
-                        SettingsRowView(imageName: "xmark.circle.fill", title: "Delete Account", tintColor: Color(.systemRed))
-                    }
+                    
                     
                 }
             }
+            .navigationTitle("Profile")
         }
     }
 }

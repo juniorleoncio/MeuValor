@@ -19,12 +19,13 @@ class CreateUserViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     @Published var currentSalary: Salary?
+    @Published var isPresenting = false
     
     init() {
         self.userSession = Auth.auth().currentUser
         Task {
             await fetchUser()
-            await fetchSalary()
+            
         }
     }
     
@@ -36,6 +37,7 @@ class CreateUserViewModel: ObservableObject {
             let encodeUser = try Firestore.Encoder().encode(user)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodeUser)
             await fetchUser()
+            try await createSalary(salary: 1, dayJobMonth: 1, dayForWeek: 1, hourJobForDay: 1)
         } catch {
             print("DEBUG: Failed to create user with error \(error.localizedDescription)")
         }
@@ -52,10 +54,10 @@ class CreateUserViewModel: ObservableObject {
         }
     }
     
-    func updateSalary(salary: Double, dayJobMonth: Double, dayForWeek: Double, hourJobForDay: Double) async throws {
+    func createSalary(salary: Double, dayJobMonth: Double, dayForWeek: Double, hourJobForDay: Double) async throws {
         guard let userID = userSession?.uid else { return }
         let salarioDocumentRef = Firestore.firestore().collection("salarios").document(userID)
-        let novoSalario = Salary(salary: salary, dayJobMonth: dayJobMonth, dayForWeek: dayForWeek, hourJobForDay: hourJobForDay)
+        let novoSalario = Salary(salary: 1, dayJobMonth: 1, dayForWeek: 1, hourJobForDay: 1)
         let encodeSalario = try Firestore.Encoder().encode(novoSalario)
         try await salarioDocumentRef.setData(encodeSalario)
     }
@@ -71,6 +73,8 @@ class CreateUserViewModel: ObservableObject {
     }
     
     
+    
+    
     func fetchUser() async {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -78,20 +82,6 @@ class CreateUserViewModel: ObservableObject {
         self.currentUser = try? snapshot.data(as: User.self)
     }
     
-    func fetchSalary() async {
-        guard let userID = userSession?.uid else { return }
-        let salaryDocumentRef = Firestore.firestore().collection("salarios").document(userID)
-        guard let snapshot = try? await salaryDocumentRef.getDocument() else { return }
-        self.currentSalary = try? snapshot.data(as: Salary.self)
-    }
-    
-    func calculateHourlySalary() -> Double? {
-        guard let salary = currentSalary?.salary, let hourJobForDay = currentSalary?.hourJobForDay, let dayJobMonth = currentSalary?.dayJobMonth else {
-            return nil
-        }
-        let hoursPerMonth = hourJobForDay * dayJobMonth
-        return salary / hoursPerMonth
-    }
  
 }
 

@@ -14,7 +14,7 @@ struct RegisterView: View {
     @State var password = ""
     @State var confirmPassword = ""
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var createVM: CreateUserViewModel
+    @EnvironmentObject var createViewModel: CreateUserViewModel
     
     var body: some View {
         VStack {
@@ -63,7 +63,7 @@ struct RegisterView: View {
             
             Button {
                 Task {
-                   try await createVM.createUser(withEmail: email, password: password, fullname: fullname)
+                   try await createViewModel.createUser(withEmail: email, password: password, fullname: fullname)
                 }
             } label: {
                 Text("Cadastre-se")

@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D8040CD92A0553FE006E27C1 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8040CD82A0553FE006E27C1 /* CreateUserViewModel.swift */; };
-		D8040CDE2A056E1A006E27C1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8040CDD2A056E1A006E27C1 /* SplashView.swift */; };
+		D8040CDE2A056E1A006E27C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8040CDD2A056E1A006E27C1 /* ContentView.swift */; };
 		D8040CE12A05798F006E27C1 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8040CE02A05798F006E27C1 /* SettingsRowView.swift */; };
-		D8C3A6B52A05B9A100ABB925 /* EditDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3A6B42A05B9A100ABB925 /* EditDataView.swift */; };
+		D8C3A6B52A05B9A100ABB925 /* EditHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3A6B42A05B9A100ABB925 /* EditHomeView.swift */; };
 		D8C3A6B72A05C62500ABB925 /* Salary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3A6B62A05C62500ABB925 /* Salary.swift */; };
+		D8C3A6B92A06859A00ABB925 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3A6B82A06859A00ABB925 /* HomeViewModel.swift */; };
+		D8C3A6BB2A069E3F00ABB925 /* EditHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3A6BA2A069E3F00ABB925 /* EditHomeViewModel.swift */; };
 		D8CD66032A04200200F3DD17 /* Meu_ValorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD66022A04200200F3DD17 /* Meu_ValorApp.swift */; };
 		D8CD66052A04200200F3DD17 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD66042A04200200F3DD17 /* HomeView.swift */; };
 		D8CD66072A04200300F3DD17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CD66062A04200300F3DD17 /* Assets.xcassets */; };
@@ -30,8 +32,6 @@
 		D8CD66462A04479700F3DD17 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D8CD66452A04479700F3DD17 /* FirebaseFirestore */; };
 		D8CD66482A04479700F3DD17 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D8CD66472A04479700F3DD17 /* FirebaseFirestoreSwift */; };
 		D8E3563B2A047FD700A1F344 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3563A2A047FD700A1F344 /* CardView.swift */; };
-		D8E3563D2A048C2200A1F344 /* HomeBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3563C2A048C2200A1F344 /* HomeBottomView.swift */; };
-		D8E356402A048DEF00A1F344 /* MoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E3563F2A048DEF00A1F344 /* MoneyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,12 @@
 
 /* Begin PBXFileReference section */
 		D8040CD82A0553FE006E27C1 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
-		D8040CDD2A056E1A006E27C1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		D8040CDD2A056E1A006E27C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8040CE02A05798F006E27C1 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
-		D8C3A6B42A05B9A100ABB925 /* EditDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataView.swift; sourceTree = "<group>"; };
+		D8C3A6B42A05B9A100ABB925 /* EditHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHomeView.swift; sourceTree = "<group>"; };
 		D8C3A6B62A05C62500ABB925 /* Salary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salary.swift; sourceTree = "<group>"; };
+		D8C3A6B82A06859A00ABB925 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		D8C3A6BA2A069E3F00ABB925 /* EditHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHomeViewModel.swift; sourceTree = "<group>"; };
 		D8CD65FF2A04200200F3DD17 /* Meu Valor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meu Valor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CD66022A04200200F3DD17 /* Meu_ValorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meu_ValorApp.swift; sourceTree = "<group>"; };
 		D8CD66042A04200200F3DD17 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -73,8 +75,6 @@
 		D8CD663A2A04425400F3DD17 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D8CD663C2A0446C400F3DD17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8E3563A2A047FD700A1F344 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		D8E3563C2A048C2200A1F344 /* HomeBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomView.swift; sourceTree = "<group>"; };
-		D8E3563F2A048DEF00A1F344 /* MoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,7 @@
 		D8040CDC2A056E05006E27C1 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				D8040CDD2A056E1A006E27C1 /* SplashView.swift */,
+				D8040CDD2A056E1A006E27C1 /* ContentView.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -189,7 +189,6 @@
 			children = (
 				D8040CDF2A05756A006E27C1 /* Core */,
 				D8040CDC2A056E05006E27C1 /* Splash */,
-				D8E3563E2A048DCF00A1F344 /* Money */,
 				D8CD66302A04418F00F3DD17 /* Shared */,
 				D8CD662F2A04212C00F3DD17 /* Home */,
 			);
@@ -217,7 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				D8CD66042A04200200F3DD17 /* HomeView.swift */,
-				D8C3A6B42A05B9A100ABB925 /* EditDataView.swift */,
+				D8C3A6B42A05B9A100ABB925 /* EditHomeView.swift */,
+				D8C3A6B82A06859A00ABB925 /* HomeViewModel.swift */,
+				D8C3A6BA2A069E3F00ABB925 /* EditHomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -226,18 +227,9 @@
 			isa = PBXGroup;
 			children = (
 				D8E3563A2A047FD700A1F344 /* CardView.swift */,
-				D8E3563C2A048C2200A1F344 /* HomeBottomView.swift */,
 				D8040CE02A05798F006E27C1 /* SettingsRowView.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		D8E3563E2A048DCF00A1F344 /* Money */ = {
-			isa = PBXGroup;
-			children = (
-				D8E3563F2A048DEF00A1F344 /* MoneyView.swift */,
-			);
-			path = Money;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,19 +373,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8E3563D2A048C2200A1F344 /* HomeBottomView.swift in Sources */,
 				D8E3563B2A047FD700A1F344 /* CardView.swift in Sources */,
 				D8CD66052A04200200F3DD17 /* HomeView.swift in Sources */,
-				D8E356402A048DEF00A1F344 /* MoneyView.swift in Sources */,
-				D8040CDE2A056E1A006E27C1 /* SplashView.swift in Sources */,
+				D8040CDE2A056E1A006E27C1 /* ContentView.swift in Sources */,
 				D8CD66382A04421700F3DD17 /* RegisterView.swift in Sources */,
 				D8CD66032A04200200F3DD17 /* Meu_ValorApp.swift in Sources */,
 				D8CD66352A0441F600F3DD17 /* LoginView.swift in Sources */,
 				D8040CE12A05798F006E27C1 /* SettingsRowView.swift in Sources */,
 				D8040CD92A0553FE006E27C1 /* CreateUserViewModel.swift in Sources */,
-				D8C3A6B52A05B9A100ABB925 /* EditDataView.swift in Sources */,
+				D8C3A6B52A05B9A100ABB925 /* EditHomeView.swift in Sources */,
 				D8C3A6B72A05C62500ABB925 /* Salary.swift in Sources */,
 				D8CD663B2A04425400F3DD17 /* ProfileView.swift in Sources */,
+				D8C3A6BB2A069E3F00ABB925 /* EditHomeViewModel.swift in Sources */,
+				D8C3A6B92A06859A00ABB925 /* HomeViewModel.swift in Sources */,
 				D8CD66322A0441B500F3DD17 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
