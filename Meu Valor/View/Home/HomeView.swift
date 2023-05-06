@@ -5,9 +5,14 @@
 //  Created by junior leoncio on 04/05/23.
 //
 
+
 import SwiftUI
 
+
 struct HomeView: View {
+    @State private var isUpdate = false
+    @EnvironmentObject var viewmodel: CreateUserViewModel
+    
     var body: some View {
         
         VStack(spacing: 10) {
@@ -19,14 +24,13 @@ struct HomeView: View {
             
             Text("Sua hora custa:")
                 .font(.title).fontDesign(.rounded)
-            Text("R$ 6,95")
+            Text("")
                 .font(.system(size: 40, weight: .bold, design: .rounded))
-            
-            Spacer()
+                .padding(.bottom, 24)
             
             CardView(title: "Sua hora está valendo:",
                      imageSymbol: "brazilianrealsign.circle.fill",
-                     value: "R$ 60,00")
+                     value: "R$ ")
             
             CardView(title: "Seu dia está valendo:", imageSymbol: "brazilianrealsign.circle.fill", value: "R$ 400,00")
             
@@ -34,10 +38,26 @@ struct HomeView: View {
             
             CardView(title: "Seu mes está valendo:", imageSymbol: "brazilianrealsign.circle.fill", value: "R$ 5160,00")
             
+            Button { isUpdate = true } label: {
+                Label("Atualizar Dados", systemImage: "tray.and.arrow.down")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+            .padding(.top, 24)
+            .sheet(isPresented: $isUpdate) {
+                EditDataView()
+            }
+            
+            
             Spacer()
+            
+            
             
         }
         .padding()
+        
         
     }
 }
@@ -45,6 +65,7 @@ struct HomeView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(CreateUserViewModel())
     }
 }
 

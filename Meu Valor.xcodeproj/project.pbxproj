@@ -10,6 +10,8 @@
 		D8040CD92A0553FE006E27C1 /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8040CD82A0553FE006E27C1 /* CreateUserViewModel.swift */; };
 		D8040CDE2A056E1A006E27C1 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8040CDD2A056E1A006E27C1 /* SplashView.swift */; };
 		D8040CE12A05798F006E27C1 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8040CE02A05798F006E27C1 /* SettingsRowView.swift */; };
+		D8C3A6B52A05B9A100ABB925 /* EditDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3A6B42A05B9A100ABB925 /* EditDataView.swift */; };
+		D8C3A6B72A05C62500ABB925 /* Salary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3A6B62A05C62500ABB925 /* Salary.swift */; };
 		D8CD66032A04200200F3DD17 /* Meu_ValorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD66022A04200200F3DD17 /* Meu_ValorApp.swift */; };
 		D8CD66052A04200200F3DD17 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD66042A04200200F3DD17 /* HomeView.swift */; };
 		D8CD66072A04200300F3DD17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CD66062A04200300F3DD17 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		D8040CD82A0553FE006E27C1 /* CreateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = "<group>"; };
 		D8040CDD2A056E1A006E27C1 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		D8040CE02A05798F006E27C1 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		D8C3A6B42A05B9A100ABB925 /* EditDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataView.swift; sourceTree = "<group>"; };
+		D8C3A6B62A05C62500ABB925 /* Salary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salary.swift; sourceTree = "<group>"; };
 		D8CD65FF2A04200200F3DD17 /* Meu Valor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meu Valor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CD66022A04200200F3DD17 /* Meu_ValorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meu_ValorApp.swift; sourceTree = "<group>"; };
 		D8CD66042A04200200F3DD17 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				D8CD66312A0441B500F3DD17 /* User.swift */,
+				D8C3A6B62A05C62500ABB925 /* Salary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				D8CD66042A04200200F3DD17 /* HomeView.swift */,
+				D8C3A6B42A05B9A100ABB925 /* EditDataView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -385,6 +391,8 @@
 				D8CD66352A0441F600F3DD17 /* LoginView.swift in Sources */,
 				D8040CE12A05798F006E27C1 /* SettingsRowView.swift in Sources */,
 				D8040CD92A0553FE006E27C1 /* CreateUserViewModel.swift in Sources */,
+				D8C3A6B52A05B9A100ABB925 /* EditDataView.swift in Sources */,
+				D8C3A6B72A05C62500ABB925 /* Salary.swift in Sources */,
 				D8CD663B2A04425400F3DD17 /* ProfileView.swift in Sources */,
 				D8CD66322A0441B500F3DD17 /* User.swift in Sources */,
 			);
